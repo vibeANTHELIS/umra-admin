@@ -1,0 +1,110 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.leftColumn {
+  flex: 1;
+  background-color: #071410;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.radialGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(ellipse at center, rgba(46,204,113,0.06) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.leftContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 380px;
+  gap: 28px;
+}
+
+.logoBadge {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: var(--bg-card);
+  border: 2px solid rgba(201,168,76,0.6);
+  box-shadow: 0 0 20px rgba(46,204,113,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mosqueGlow {
+  position: absolute;
+  top: 100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(46,204,113,0.08) 0%, transparent 70%);
+  filter: blur(20px);
+  z-index: -1;
+}
+
+.mosqueSilhouette {
+  width: 280px;
+  height: 140px;
+  opacity: 0.8;
+}
+
+.headline {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-white);
+  text-align: center;
+  margin: 0;
+}
+
+.subtext {
+  font-size: 16px;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.goldDivider {
+  width: 40px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  margin: 16px 0;
+}
+
+.arabicText {
+  color: var(--color-gold);
+  font-size: 18px;
+  text-align: center;
+}
+
+.versionTag {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  font-size: 11px;
+  color: var(--color-muted);
+  z-index: 2;
+}
+
+.rightColumn {
+  flex: 1;
+  background-color: var(--bg-page);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

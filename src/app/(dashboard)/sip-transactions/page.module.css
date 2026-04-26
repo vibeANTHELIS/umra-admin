@@ -1,0 +1,205 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.container > * {
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-6);
+}
+
+.statCard {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+  border: 1px solid transparent;
+  min-width: 0;
+}
+
+.statCard > div:last-child {
+  min-width: 0;
+  flex: 1;
+}
+
+.borderGreen { border-left: 4px solid var(--color-success); }
+.borderGold { border-left: 4px solid var(--color-gold); }
+.borderRed { border-left: 4px solid var(--color-danger); }
+
+.statLabel {
+  font-size: 13px;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.statValue {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.filterBar {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--bg-inner);
+  border-radius: 12px;
+  padding: 0 var(--space-4);
+  height: 44px;
+}
+
+.searchInput {
+  background: transparent;
+  border: none;
+  color: var(--color-white);
+  font-size: 14px;
+  outline: none;
+}
+
+.filterSelect {
+  background: var(--bg-inner);
+  border: 1px solid var(--border-gold);
+  border-radius: 12px;
+  color: var(--color-white);
+  font-size: 14px;
+  padding: 0 var(--space-4);
+  height: 44px;
+  outline: none;
+}
+
+.resetLink {
+  background: transparent;
+  border: none;
+  color: var(--color-gold);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0 var(--space-2);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.table th {
+  background: var(--bg-inner);
+  color: var(--color-muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: left;
+  padding: var(--space-4) var(--space-5);
+}
+
+.table td {
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.mono-text {
+  font-family: monospace;
+}
+
+.typePill {
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.typePill.hajj { background: var(--color-gold); color: #000; }
+.typePill.umrah { background: var(--color-success); color: #000; }
+.typePill.ziyarat { background: #27ae60; color: #000; }
+
+.statusPill {
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.statusPill.success { color: var(--color-success); }
+.statusPill.failed { color: var(--color-danger); }
+.statusPill.pending { color: var(--color-warning); }
+
+.actionBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-inner);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+}
+
+.expandedRow td {
+  background: rgba(229, 57, 53, 0.05);
+  padding: 0;
+}
+
+.failedDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  color: var(--color-danger);
+  font-size: 13px;
+  border-bottom: 1px solid rgba(229, 57, 53, 0.2);
+}
+
+.alertCard {
+  background: rgba(229, 57, 53, 0.05);
+  border: 1px solid rgba(229, 57, 53, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alertIcon {
+  width: 48px;
+  height: 48px;
+  background: var(--bg-inner);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

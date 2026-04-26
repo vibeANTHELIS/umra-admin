@@ -1,0 +1,210 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filterTabs {
+  display: inline-flex;
+  gap: var(--space-2);
+  background: var(--bg-card);
+  padding: var(--space-1);
+  border-radius: var(--radius-btn);
+  border: 1px solid var(--border-gold-strong);
+}
+
+.tab {
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-btn);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.tabActive {
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-btn);
+  font-size: var(--text-sm);
+  background: var(--gold-premium-gradient);
+  color: var(--bg-sidebar);
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-base);
+}
+
+.card:hover {
+  border-color: var(--color-gold-strong);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
+}
+
+.cardImage {
+  height: 180px;
+  position: relative;
+  padding: var(--space-4);
+  display: flex;
+  justify-content: space-between;
+}
+
+.badges {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+}
+
+.goldBadge {
+  background: var(--color-gold);
+  color: var(--bg-sidebar);
+}
+
+.greenBadge {
+  background: var(--color-success);
+  color: var(--color-white);
+}
+
+.tagBadge {
+  background: var(--color-white);
+  color: var(--bg-sidebar);
+}
+
+.cardBody {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex: 1;
+}
+
+.pkgName {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-white);
+}
+
+.pkgPrice {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+}
+
+.includesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-2) 0;
+}
+
+.includeChip {
+  background: var(--bg-inner);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-sm);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+
+.cardFooter {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: var(--space-3) var(--space-5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+.toggle {
+  width: 36px;
+  height: 20px;
+  background: var(--bg-inner);
+  border-radius: 20px;
+  position: relative;
+  transition: var(--transition-base);
+  border: 1px solid var(--border-gold-strong);
+}
+
+.toggleActive {
+  background: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.toggleThumb {
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: var(--transition-base);
+}
+
+.toggleActive .toggleThumb {
+  left: 18px;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.iconBtn {
+  width: 32px;
+  height: 32px;
+  background: var(--bg-inner);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.05);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.iconBtn:hover {
+  background: var(--bg-sidebar);
+  border-color: rgba(255,255,255,0.15);
+}

@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --bg-page: #0A1F14;
+  --bg-card: #1A3A28;
+  --bg-inner: #223D2C;
+  --bg-sidebar: #071410;
+  
+  --color-gold: #C9A84C;
+  --color-gold-dark: #8B6520;
+  --color-success: #2ECC71;
+  --color-warning: #F0A500;
+  --color-danger: #E53935;
+  --color-muted: #8A9E90;
+  --color-white: #FFFFFF;
+  
+  --border-gold: rgba(201, 168, 76, 0.3);
+  --border-gold-strong: rgba(201, 168, 76, 0.5);
+  
+  --gold-premium-gradient: linear-gradient(
+    90deg, 
+    #8A6121 0%, 
+    #C49A46 25%, 
+    #FFEDA3 50%, 
+    #C49A46 75%, 
+    #8A6121 100%
+  );
+  
+  /* Typography Scale */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 32px;
+  --text-4xl: 40px;
+
+  /* Spacing Scale (8px system) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-card: 16px;
+  --radius-lg: 24px;
+  --radius-btn: 50px;
+  --radius-input: 12px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-base: 0.25s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--color-white);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+input, textarea, select {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Utilities */
+.gold-gradient {
+  background: var(--gold-premium-gradient);
+}
+
+.gold-text {
+  color: var(--color-gold);
+}
+
+.muted-text {
+  color: var(--color-muted);
+}
+
+/* Standard Components */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-card);
+  padding: var(--space-6);
+  transition: var(--transition-base);
+}
+
+.btn-primary {
+  background: var(--gold-premium-gradient);
+  color: var(--bg-page);
+  border-radius: var(--radius-btn);
+  padding: 0 var(--space-6);
+  height: var(--space-12); /* 48px, slightly smaller than 52px for standard, or stick to 52? Let's keep 52px */
+  height: 52px;
+  font-size: var(--text-base);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--bg-inner);
+  color: var(--color-gold);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-btn);
+  padding: 0 var(--space-6);
+  height: 52px;
+  font-size: var(--text-base);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background: rgba(201, 168, 76, 0.1);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--color-gold);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-btn);
+  padding: 0 var(--space-5);
+  height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+.btn-outline-gold:hover {
+  background: rgba(201, 168, 76, 0.1);
+}
+
+.btn-outline-warning {
+  background: transparent;
+  color: var(--color-warning);
+  border: 1px solid rgba(240, 165, 0, 0.5);
+  border-radius: var(--radius-btn);
+  padding: 0 var(--space-5);
+  height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+.btn-outline-warning:hover {
+  background: rgba(240, 165, 0, 0.1);
+}
+
+.btn-ghost-danger {
+  background: transparent;
+  color: var(--color-danger);
+  border: 1px solid transparent;
+  border-radius: var(--radius-btn);
+  padding: 0 var(--space-5);
+  height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+.btn-ghost-danger:hover {
+  background: rgba(229, 57, 53, 0.1);
+}
+
+.input-field {
+  background-color: #0D2318;
+  border: 1px solid var(--border-gold-strong);
+  border-radius: var(--radius-input);
+  height: 52px;
+  padding: 0 var(--space-4);
+  color: var(--color-white);
+  font-size: var(--text-sm);
+  width: 100%;
+  transition: var(--transition-fast);
+}
+
+.input-field:focus {
+  border-color: var(--color-gold);
+  outline: none;
+}
+
+.input-field::placeholder {
+  color: var(--color-muted);
+}
+
+.status-pill {
+  border-radius: 999px;
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.status-pill.success {
+  background-color: rgba(46, 204, 113, 0.15);
+  color: var(--color-success);
+}
+
+.status-pill.warning {
+  background-color: rgba(240, 165, 0, 0.15);
+  color: var(--color-warning);
+}
+
+.status-pill.danger {
+  background-color: rgba(229, 57, 53, 0.15);
+  color: var(--color-danger);
+}
+
+.status-pill.gold {
+  background-color: rgba(201, 168, 76, 0.15);
+  color: var(--color-gold);
+}
+
+.page-title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.page-subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+/* Auth Layout background */
+.auth-bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 0l2 18 18 2-18 2-2 18-2-18-18-2 18-2z" fill="%232ECC71" fill-opacity="0.05"/></svg>');
+  z-index: 0;
+}

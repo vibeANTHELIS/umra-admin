@@ -1,0 +1,185 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.composerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-6);
+}
+
+.formGroup {
+  margin-bottom: var(--space-6);
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin-bottom: var(--space-3);
+  font-weight: 500;
+}
+
+.charCount {
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.channelOptions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.channelCard {
+  background: #0D2318;
+  border: 1px solid var(--border-gold-strong);
+  border-radius: var(--radius-input);
+  padding: var(--space-4);
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.channelActive {
+  background: rgba(201, 168, 76, 0.1);
+  border-color: var(--color-gold);
+  box-shadow: 0 4px 12px rgba(201, 168, 76, 0.1);
+}
+
+.channelIcon {
+  color: var(--color-gold);
+}
+
+.channelName {
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--color-white);
+  margin-bottom: 2px;
+}
+
+.channelDesc {
+  font-size: 11px;
+  color: var(--color-muted);
+}
+
+.checkCircle {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  color: var(--color-gold);
+}
+
+.textarea {
+  width: 100%;
+  background-color: #0D2318;
+  border: 1px solid var(--border-gold-strong);
+  border-radius: var(--radius-input);
+  padding: var(--space-4);
+  color: var(--color-white);
+  font-size: var(--text-sm);
+  resize: none;
+  font-family: inherit;
+  transition: var(--transition-fast);
+}
+
+.textarea:focus {
+  border-color: var(--color-gold);
+  outline: none;
+}
+
+/* Right Side: Phone Preview */
+.previewSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--space-8);
+}
+
+.phoneFrame {
+  width: 300px;
+  height: 600px;
+  background: #000;
+  border-radius: 40px;
+  border: 8px solid #333;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba(0,0,0,0.5);
+}
+
+.phoneNotch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 24px;
+  background: #333;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  z-index: 10;
+}
+
+.phoneScreen {
+  width: 100%;
+  height: 100%;
+  background: #111;
+  padding: var(--space-10) var(--space-4) var(--space-4);
+  display: flex;
+  flex-direction: column;
+}
+
+.previewHeader {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.previewBubble {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  flex-direction: column;
+}
+
+.previewSender {
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.previewSender::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: var(--color-gold);
+  border-radius: 4px;
+}
+
+.previewText {
+  font-size: var(--text-sm);
+  color: #fff;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.previewTime {
+  font-size: 10px;
+  color: rgba(255,255,255,0.4);
+  align-self: flex-end;
+  margin-top: 8px;
+}

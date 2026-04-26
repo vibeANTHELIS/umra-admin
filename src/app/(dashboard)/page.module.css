@@ -1,0 +1,265 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  width: 100%;
+}
+
+.welcomeBanner {
+  background: linear-gradient(135deg, #1E5C35, #0D2F1A);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: var(--radius-card);
+  padding: var(--space-8) var(--space-10);
+  position: relative;
+  overflow: hidden;
+}
+
+.welcomePattern {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 0l2 18 18 2-18 2-2 18-2-18-18-2 18-2z" fill="%23C9A84C" fill-opacity="0.08"/></svg>');
+  pointer-events: none;
+}
+
+.welcomeContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcomeLeft h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-2);
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.welcomeLeft p {
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+}
+
+.welcomeRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.dateText {
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--color-white);
+}
+
+.liveChip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: rgba(46,204,113,0.15);
+  color: var(--color-success);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-btn);
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+.liveDot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-success);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--color-success);
+}
+
+.kpiRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.kpiCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-left: 4px solid var(--color-gold);
+  border-radius: var(--radius-card);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: var(--transition-base);
+}
+
+.kpiCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.kpiHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.kpiIconWrapper {
+  width: 40px;
+  height: 40px;
+  background: var(--bg-inner);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpiBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.kpiTitle {
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.kpiValue {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.chartsRow {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.chartCardLeft {
+  flex: 3;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-card);
+  padding: var(--space-6);
+}
+
+.chartCardRight {
+  flex: 2;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-card);
+  padding: var(--space-6);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-5);
+}
+
+.cardHeader h3 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-white);
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  gap: var(--space-2);
+  background: var(--bg-inner);
+  padding: var(--space-1);
+  border-radius: var(--radius-btn);
+}
+
+.tab {
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-btn);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.tabActive {
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-btn);
+  font-size: var(--text-xs);
+  background: var(--gold-premium-gradient);
+  color: var(--bg-sidebar);
+  font-weight: 600;
+}
+
+.chartPlaceholder {
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.02);
+  border-radius: var(--radius-md);
+  border: 1px dashed rgba(255,255,255,0.1);
+}
+
+.donutPlaceholder {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 16px solid var(--color-gold);
+  border-top-color: var(--color-success);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.donutPlaceholder span {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.donutPlaceholder small {
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+}
+
+.bottomRow {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  background: var(--bg-inner);
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+}
+
+.table td {
+  padding: var(--space-4);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: var(--text-sm);
+  color: var(--color-white);
+  vertical-align: middle;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover td {
+  background: rgba(255,255,255,0.02);
+}
